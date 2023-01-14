@@ -19,12 +19,20 @@ function filtrar(funcion) {
   //   name: 'phone'
   // }, {
   //   price: 30,
-  //   name: 'lamp'
+  //   name: 'lamp' 
   // }]
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
-
+  Array.prototype.filtrar = function(callback){
+    let filtrados = []
+    for(i=0; i< this.length; i++){
+      if(callback(this[i])){
+        filtrados.push(this[i]);
+      }
+    }
+    return filtrados;
+  }
 };
 
 // No modifiques nada debajo de esta linea //

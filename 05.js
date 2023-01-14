@@ -14,9 +14,11 @@ function pluck(array, propiedad) {
   // Pista: es una buena oportunidad para usar map.
 
   // Tu código acá:
-
+  let nuevasP = array.map(obj => obj[propiedad])
+  return nuevasP;
 }
 
+//nos van a pasar como parametro el valor de la propiedad y nosotros queremos saber el valor de esa propiedad.
 // No modifiques nada debajo de esta linea //
 
 module.exports = pluck
